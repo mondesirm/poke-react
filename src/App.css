@@ -1,0 +1,102 @@
+* { transition: all .2s ease !important; scrollbar-color: #202324 #454a4d; animation: fadeIn .6s ease; }
+
+a, input, button, h4, h5, h6, span {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+body { background-color: transparent !important; }
+
+.App {
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: repeat;
+	background-color: #181a1b;
+	padding-top: 4rem;
+	min-height: 100vh;
+	display: flex;
+    align-items: center;
+}
+
+.navbar { background-color: #98100e !important; }
+
+.homeCard { background: #181a1bcc; }
+
+.searchBar input {
+	border: #3c4144;
+	height: 1.75em;
+	border-radius: 15px 0 0 15px;
+	font-size: 1.75em;
+	padding-left: 50px;
+	padding-right: 0;
+}
+.searchBar input:not(:last-child) { background: #181a1bcc; }
+.searchBar input:last-child {
+	border-radius: 0 15px 15px 0;
+	border-left: 1px solid white;
+	padding: 0 5px;
+	width: 200px;
+}
+
+.col-pk {
+	position: relative;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.col-pk .card {
+	justify-content: center;;
+}
+.col-pk .card-header {
+	font-size: xxx-large;
+	opacity: .2;
+}
+.col-pk .card-body { padding: .9px; }
+
+@media screen and (min-width: 1200px) {
+	.col-pk { flex-basis: 20%; max-width: 20%; }
+}
+
+@media screen and (max-width: 1200px) {
+	.col-pk { flex-basis: 20%; max-width: 20%; }
+	/* .navbar .searchBar > div { margin-bottom: 0 !important; } */
+	/* .container .searchBar { position: fixed; z-index: 1030; top: 5px; right: 10px; width: 50px; }
+	.container .searchBar input { border-radius: 15px; }
+	.container .searchBar:hover input:not(:last-child),
+	.container .searchBar input:focus,
+	.container .searchBar input:not(:last-child):not(:placeholder-shown) { position: fixed; left: calc(100% - 350px); width: 340px; direction: rtl; padding-right: 50px !important; border-radius: 0 15px 15px 0; padding-left: 12px; }
+	.container .searchBar input + input {  border-radius: 15px 0 0 15px; opacity: 0; }
+	.container .searchBar:hover input:last-child,
+	.container .searchBar input:focus + input,
+	.container .searchBar input:not(:placeholder-shown) + input { position: fixed; left: calc(80% - 350px); border-radius: 15px 0 0 15px; opacity: 1; border: #3c4144; }	    */
+}
+
+@media screen and (min-width: 576px)  and (max-width: 768px) {
+	.col-pk { flex-basis: 25%; max-width: 25%; }
+	/* .loader { width: -webkit-fill-available; width: -moz-available; } */
+	/* .searchBar { width: 25%; } */
+}
+
+@media screen and (max-width: 576px) {
+	/* .col-pk .card-body { padding: 0; } */
+	/* .col-pk .card-title { display: none; } */
+	/* *:not(.badge, .float-right, .card-header) { width: -webkit-fill-available; width: -moz-available; } */
+}
+
+@media screen and (min-width: 460px)  and (max-width: 576px) {
+	.col-pk { flex-basis: 25%; max-width: 25%; }
+}
+
+@media screen and (min-width: 220px)  and (max-width: 460px) {
+	.col-pk { flex-basis: 50%; max-width: 50%; }
+}
+
+@media screen and (max-width: 220px) {
+	.col-pk { flex-basis: 100%; max-width: 100%; }
+}
+
+/* .fadeIn { animation: fadeIn .2s ease; } */
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
